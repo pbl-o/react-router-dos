@@ -1,16 +1,29 @@
-# React + Vite
+Pizzería (Sexta parte)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Pablo Díaz
 
-Currently, two official plugins are available:
+La sexta etapa consiste en implementar rutas protegidas con React Router  y utilizar el hook useParams para obtener el id al hacer fetch en una Api.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+*La página está en proceso y de momento es accesible solo de manera local. Por ello de manera temporal se han dispuesto instrucciones específicas para esta fase del proyecto, tanto aquí, como en forma de comentarios en el fichero App.jsx
 
-## React Compiler
+Para ejecutar de manera local:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1 - Descargar y abrir
+2 - Instalar dependencias (npm i)
+3 - Ejecutar (npm run dev)
+*Esta aplicación funciona en conjunto con una api (node.js express.js) para su correcto renderizado.
 
-## Expanding the ESLint configuration
+https://github.com/pbl-o/backendpizza
+Para ejecutar de manera local y en conjunto con la App de react:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1 - Descargar y abrir
+2 - Ejecutar (npm start)
+Instrucciones específicas: (Soluciones provisorias)
+
+Login.jsx Credenciales:
+
+email: email
+
+password: theSuperPassword
+
+Tecnologías utilizadas: React, Bootstrap + Vite
