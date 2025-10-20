@@ -11,9 +11,6 @@ const MyNavbar = () => {
   const { total } = useContext(CartContext);
   const { token, logOut } = useContext(UserContext);
   const navigateNavbar = useNavigate();
-  
-
-
 
   const setActiveClass = ({ isActive }) => (isActive ? "active" : "inactive");
   return (
@@ -23,8 +20,9 @@ const MyNavbar = () => {
       variant="dark"
     >
       <Container fluid>
-        <Navbar.Brand as={Nav.Link}
-        to="/"
+        <Navbar.Brand
+          as={Nav.Link}
+          to="/"
           onClick={() => {
             navigateNavbar("/");
           }}
@@ -42,18 +40,16 @@ const MyNavbar = () => {
                 className={setActiveClass}
                 to={"/login"}
                 onClick={() => {
-                  if(token){
-                    logOut()
+                  if (token) {
+                    logOut();
                   }
                 }}
-                end
               >
                 {token ? "🔐Logout" : "🔐Login"}
               </NavLink>
               <NavLink
                 className={setActiveClass}
                 to={token ? "/profile" : "/register"}
-                end
               >
                 {token ? "🔐Profile" : "🔐Register"}
               </NavLink>
