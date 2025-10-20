@@ -1,9 +1,10 @@
-import { useContext, useEffect, useState } from "react";
-/* import { useNavigate } from "react-router-dom"; */
+import { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { UserContext } from "../context/UserContext";
 
 const Login = () => {
   const {
+    token,
     setToken,
     email,
     setEmail,
@@ -16,7 +17,7 @@ const Login = () => {
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  // let navigateToProfile = useNavigate();
+  let navigateToProfile = useNavigate();
 
   const handleValidation = (e) => {
     e.preventDefault();
@@ -33,12 +34,14 @@ const Login = () => {
       return;
     }
 
+    setToken(true);
     setError(false);
     setErrorMessage("");
     alert("Login Succesful");
     setEmail("");
     setPassword("");
-    setToken(true);
+
+    navigateToProfile("/profile");
   };
 
   return (

@@ -41,17 +41,17 @@ Para el Login, el email "almacenado" es: 'email' y la contraseña: 'theSuperPass
         <Route path="/" element={<Home />}></Route>
         <Route
           path="/login"
-          element={!token ? <Login /> : <Navigate to="/" end />}
+          element={!token ? <Login /> : <Navigate to="/"  />}
         ></Route>
         <Route
           path="/register"
-          element={!token ? <Register /> : <Navigate to="/" end />}
+          element={!token ? <Register /> : <Navigate to="/"  />}
         ></Route>
         <Route path="/cart" element={<Cart />}></Route>
         <Route path="/pizza/:pid" element={<Pizza />}></Route>
         <Route
           path={"/profile"}
-          element={token ? <Profile /> : <Navigate to="/login" end />}
+          element={token ? <Profile /> : <Navigate to="/login"  />}
         ></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>

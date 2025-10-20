@@ -15,10 +15,10 @@ const UserProvider = ({ children }) => {
 
   //Para observar el profile protegido, cambiar estado para false;
   //Para observar redireccionamiento al home desde login y register dejar true;
-  const [token, setToken] = useState(true);
+  const [token, setToken] = useState(false);
 
   const logOut = () => {
-    if (!token) return;
+    // if (!token) return; (token null)
 
     alert("Estamos cerrando su sesión...");
     setToken(false);
