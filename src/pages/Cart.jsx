@@ -7,7 +7,7 @@ import { UserContext } from "../context/UserContext.jsx";
 
 const Cart = () => {
   const { cartArray, setCartArray, total } = useContext(CartContext);
-  const {token} = useContext(UserContext)
+  const { token } = useContext(UserContext);
 
   //Se actualiza el array sumando al contador o no se hace nada
   const updatePlus = (id) => {
@@ -74,11 +74,16 @@ const Cart = () => {
             );
           })}
 
+          {/*Token True = botón Activado | Token False = botón inactivo (disabled)  */}
           <div className="text-center mt-3">
             <h3 className="">Total</h3>
             <p className=" fw-bolder fs-3">{conversor(total)}</p>
             <div className="col-7 mx-auto">
-              <MyButton btnText="Pagar" btnColor="dark" isDisabled={token ? false : true}/>
+              <MyButton
+                btnText="Pagar"
+                btnColor="dark"
+                isDisabled={token ? false : true}
+              />
             </div>
           </div>
         </Card>

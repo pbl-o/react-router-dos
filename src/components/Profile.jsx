@@ -5,8 +5,10 @@ import emptyAvatar from "../assets/empty.jpeg";
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 
+//Token False = Página no accesible, redirecciona al Login;
+//Token True = Página accesible;
 const Profile = () => {
-  const {logOut } = useContext(UserContext);
+  const { logOut } = useContext(UserContext);
   const navigate = useNavigate();
   return (
     <>
@@ -22,8 +24,7 @@ const Profile = () => {
             btnColor="dark"
             btnText="Cerrar Sesión"
             clickAction={() => {
-              logOut(),
-               navigate("/")
+              logOut(), navigate("/");
             }}
           />
         </Card.Body>

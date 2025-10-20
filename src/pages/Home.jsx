@@ -4,19 +4,15 @@ import { useContext, useEffect } from "react";
 import { CartContext } from "../context/CartContext.jsx";
 import { useNavigate } from "react-router-dom";
 
-
 const Home = () => {
   //Elementos a usar del context (array de todas las pizzas)
-  const { pizzaArray, apiFetcher, addToCart} =
-    useContext(CartContext);
+  const { pizzaArray, apiFetcher, addToCart } = useContext(CartContext);
   let navigateToPizza = useNavigate();
 
   //se hace un fecth para recibir los datos de las pizzas al montar el componente.
   useEffect(() => {
     apiFetcher("http://localhost:5000/api/pizzas");
   }, []);
-
- 
 
   return (
     <>
@@ -48,8 +44,6 @@ const Home = () => {
         })}
       </div>
     </>
-
-    //**Cada vez que se aprieta el botón "Añadir" se activa la función addToCart() que culmina en la actualización de cartArray.
   );
 };
 

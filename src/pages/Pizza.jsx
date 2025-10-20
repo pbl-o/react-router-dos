@@ -3,10 +3,8 @@ import { CartContext } from "../context/CartContext.jsx";
 import { useNavigate, useParams } from "react-router-dom";
 import CardPizzaDetail from "../components/CardPizzaDetail.jsx";
 
-
 const Pizza = () => {
-  const {apiPizza, setApiPizza, addToCart } =
-    useContext(CartContext);
+  const { apiPizza, setApiPizza, addToCart } = useContext(CartContext);
   const { pid } = useParams();
   let navigateHome = useNavigate();
 
@@ -26,7 +24,6 @@ const Pizza = () => {
   useEffect(() => {
     apiFetcherDetail(pid);
   }, [pid]);
-
 
   return (
     <>

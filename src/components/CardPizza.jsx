@@ -22,14 +22,6 @@ const CardPizza = ({
             <Card.Title className="text-capitalize">{name}</Card.Title>
           </Card.Body>
           <ListGroup className="list-group-flush">
-            {/*             <ListGroup.Item>
-              <Accordion defaultActiveKey="1">
-                <Accordion.Item eventKey="0">
-                  <Accordion.Header>Detalle</Accordion.Header>
-                  <Accordion.Body>{description}</Accordion.Body>
-                </Accordion.Item>
-              </Accordion>
-            </ListGroup.Item> */}
             <ListGroup.Item>
               <Card.Text className="fw-bolder text-center pt-1 px-4">
                 Ingredientes

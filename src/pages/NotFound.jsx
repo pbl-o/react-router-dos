@@ -11,7 +11,8 @@ const NotFound = () => {
           <div className="d-flex flex-column justify-content-center align-items-center p-5">
             <h2 className="text-danger fs-1">404! </h2>
             <p className="fs-3 text-secondary">
-              Lo sentimos 😞 , pero lo que estás buscando no existe, o tal vez está en otro lugar...
+              Lo sentimos 😞 , pero lo que estás buscando no existe, o tal vez
+              está en otro lugar...
             </p>
           </div>
 

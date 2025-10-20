@@ -4,8 +4,6 @@ import { useState } from "react";
 export const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
-
-
   //Array de pizzas Lista Home (desde la api)
   const [pizzaArray, setPizzaArray] = useState([]);
   // Array de Pizzas Cart (array dinámico que acumula pedidos)
@@ -31,7 +29,6 @@ const CartProvider = ({ children }) => {
       console.error("Fetching error", error);
     }
   };
-
 
   //HOMEJ.JSX
   //arrayCarrito = cartArray / setCartArray
@@ -74,7 +71,6 @@ const CartProvider = ({ children }) => {
 mostrado en la página Cart, además este
 tiene que ser el mismo que se muestra en el
 navbar."*/
-
 
   //PROVIDER
   return (

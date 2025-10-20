@@ -13,31 +13,9 @@ import { useContext, useEffect } from "react";
 import { UserContext } from "./context/UserContext.jsx";
 
 function App() {
-  const {token} = useContext(UserContext)
+  const { token } = useContext(UserContext);
 
-  useEffect(()=>{
-    console.log(token)
-  },[token])
-  return (
-    <>
-  
-          <MyNavbar />
-          <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/login" element={!token || token === false ? <Login/> : <Navigate to='/'/>}></Route>
-            <Route path="/register" element={!token || token === false ? <Register/> : <Navigate to='/'/>}></Route>
-            <Route path="/cart" element={<Cart />}></Route>
-            <Route path="/pizza/:pid" element={<Pizza />}></Route>
-            <Route path={"/profile"}element={token === true ? <Profile/> : <Navigate to='/login'/>}></Route>
-            <Route path="*" element={<NotFound />}></Route>
-          </Routes>
-          <Footer />
-
-    </>
-  );
-}
-
-/* 
+  /* 
   
 Soluciones provisorias: 
 
@@ -45,4 +23,41 @@ Login.jsx
 Para el Login, el email "almacenado" es: 'email' y la contraseña: 'theSuperPassword'
    
  */
+
+  // UserContext.jsx / Login.jsx
+  //Para probar Login y Logout, cambiar estado token en userContext.jsx:
+  //Para observar el profile protegido, cambiar estado para false;
+  //Para observar redireccionamiento al home desde login y register mantener o cambiar para true;
+
+  //Seguimiento de token en la consola
+  useEffect(() => {
+    console.log(token);
+  }, [token]);
+
+  return (
+    <>
+      <MyNavbar />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route
+          path="/login"
+          element={!token ? <Login /> : <Navigate to="/" end />}
+        ></Route>
+        <Route
+          path="/register"
+          element={!token ? <Register /> : <Navigate to="/" end />}
+        ></Route>
+        <Route path="/cart" element={<Cart />}></Route>
+        <Route path="/pizza/:pid" element={<Pizza />}></Route>
+        <Route
+          path={"/profile"}
+          element={token ? <Profile /> : <Navigate to="/login" end />}
+        ></Route>
+        <Route path="*" element={<NotFound />}></Route>
+      </Routes>
+      <Footer />
+    </>
+  );
+}
+
 export default App;

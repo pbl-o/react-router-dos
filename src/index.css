@@ -1,12 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
 * {
   font-family: "Gloria Hallelujah", cursive;
   font-weight: 400;
   font-style: normal;
 }
-
-
-
 
 .header-bg {
   background: url("./assets/Header.jpg");
@@ -25,21 +22,19 @@
   opacity: 0.7;
 }
 
-
-.active, .inactive{
-text-decoration: none;
-  padding: .2rem;
-  letter-spacing:  2px;
+.active,
+.inactive {
+  text-decoration: none;
+  padding: 0.2rem;
+  letter-spacing: 2px;
 }
 
-.active{
+/* NavLink css presets */
+.active {
   color: #0088ff;
   border-radius: 5px;
-  text-decoration:underline;
 }
 
-.inactive{
+.inactive {
   color: white;
 }
-
-

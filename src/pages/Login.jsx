@@ -1,16 +1,22 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {UserContext} from "../context/UserContext";
+import { UserContext } from "../context/UserContext";
 
 const Login = () => {
-  const { setToken, email, setEmail, password, setPassword, dummyEmail, dummyPassword } = useContext(UserContext);
-
-
+  const {
+    setToken,
+    email,
+    setEmail,
+    password,
+    setPassword,
+    dummyEmail,
+    dummyPassword,
+  } = useContext(UserContext);
 
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  let navigateToProfile = useNavigate("/profile");
+  // let navigateToProfile = useNavigate();
 
   const handleValidation = (e) => {
     e.preventDefault();
@@ -32,7 +38,6 @@ const Login = () => {
     alert("Login Succesful");
     setEmail("");
     setPassword("");
-    navigateToProfile("/profile");
     setToken(true);
   };
 

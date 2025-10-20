@@ -1,6 +1,6 @@
 import Button from "react-bootstrap/Button";
 
-const MyButton = ({btnColor, clickAction, btnText, isDisabled}) => {
+const MyButton = ({ btnColor, clickAction, btnText, isDisabled }) => {
   return (
     <Button
       className="fw-bolder"
